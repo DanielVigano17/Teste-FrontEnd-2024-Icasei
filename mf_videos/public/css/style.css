@@ -1,0 +1,27 @@
+#mf_videos_content{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#videos_content{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.video{
+    box-sizing: border-box;
+    max-width: 25%;
+    width: 100%;
+    height: 21.875rem;
+    padding: 0.5%;
+}
+
+.video_content{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}

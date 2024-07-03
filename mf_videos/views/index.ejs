@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="mf_videos_content">
+        <h2>MF Videos</h2>
+        
+        <form action="/api/search" method="post">
+            <input type="text" placeholder="Pesquisar" name="searchInput">
+        </form>
+
+        <div id="videos_content">
+
+            <% videos.forEach(function(video) { %>
+                
+                <div class="video">
+                    <div class="video_content">
+                        <h2><%= video.snippet.title %></h2>
+                        <p>Canal: <%= video.snippet.channelTitle %></p>
+                        <p>Publicado em: <%= video.snippet.publishTime %></p>
+                        <p><%= video.snippet.description %></p>
+                        <img src="<%= video.snippet.thumbnails.medium.url %>" alt="Thumbnail">
+                    </div>
+                </div>
+                
+            <% }); %>
+    
+        </div>
+
+    </div>
+    
+</body>
+</html>
