@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mf_drawer:
+    build: ./mf_drawer
+    ports:
+      - "4002:4002"
+  mf_videos:
+    build: ./mf_videos
+    ports:
+      - "4001:4001"
+    environment:
+      - API_KEY_YOUTUBE=${API_KEY_YOUTUBE}
+    env_file:
+      - .env
+  bff:
+    build: ./bff
+    ports:
+      - "4000:4000"
